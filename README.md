@@ -3,7 +3,7 @@ Code accompanying "Deep learning guided design of dynamic proteins" by Amy B. Gu
 
 Data, scripts, and molecular dynamics trajectories can be downloaded here: https://doi.org/10.5061/dryad.m37pvmdbm.
 
-![Design approach](https://github.com/user-attachments/assets/ca1e2c4c-fd49-4d7b-a4aa-3d69a7a5f4f7)
+![Design approach](https://github.com/user-attachments/assets/3925e8fd-165a-4fa8-8238-b0753d32e522)
 
 ## Generating non-native alternative states (single-state design)
 Given a starting functional backbone (state 1), we first generate alternative conformations (state 2) using loop-helix-loop unit combinatorial sampling. Detailed documentation on this Python-based method can be found at: https://github.com/Kortemme-Lab/loop_helix_loop_reshaping. Job scripts, analysis scripts, and inputs specific for this study can be found in state_2_generation/loop_helix_loop_reshaping.
