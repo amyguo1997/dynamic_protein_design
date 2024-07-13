@@ -1,0 +1,9 @@
+# score name         priority  wght   min_allowed  extras
+ProfileScoreL1           700     1.0     -
+ProfileScoreStructL1     100     4.0     -
+SolventAccessibility     500     1.5     -
+Phi                      300     1.0     -
+Psi                      200     0.6     -
+SecondarySimilarity      600     1.0     -    predA
+RamaScore                400     0.8     -    predA
+FragmentCrmsd             0      0.0     -
