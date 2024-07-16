@@ -24,4 +24,4 @@ def summarize(af_dir):
 if __name__ == '__main__':
     
     af_dir = '$AF2_prediction_path' # contains subdirectories containing AF2 *.pdb predictions for each design
-    summarized_data_path = '/Users/amyguo/protein_switches/005_Deep_Learning_MSD/colabfold/2_state/af2_6306_apo_1smg_1.0_1.0_noCHX_bias_62/summarized_structure_pred_eval.json'
+    summarized_data_path = os.path.join(af_dir,'summarized_structure_pred_eval.json')
