@@ -15,3 +15,5 @@ A high-sequence identity design predicted to fold into the state 2 backbone was 
 
 ## Analysis of dynamic designs
 Dynamic designs were characterized using nuclear magnetic resonance (NMR) and molecular dynamics simulations. Scripts for analyzing NOESY-derived distance restraints and approximating the change in local chemical environment at each residue position can be found in data_analysis/NMR. Detailed documentation on mutual information analysis can be found at https://github.com/stefdoerr/mutinf and https://simtk.org/projects/mutinf. 
+
+Note: The PDB files available in our Dryad repository have been renumbered to be consistent with our experimentally solved structures deposited in the PDB (i.e. indexed starting from 1 including the 4 residue N-terminal thrombin cleavage site scar - if the scar is not modeled explicitly, then the numbering begins from 5). However, the single-state and multi-state design scripts using Rosetta/ProteinMPNN use a numbering system where the first residue of the PDB file is indexed as position one (regardless of what residue number is assigned in the PDB file itself), as is standard for Rosetta/ProteinMPNN software. 
