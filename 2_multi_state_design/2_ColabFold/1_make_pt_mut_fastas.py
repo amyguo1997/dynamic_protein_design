@@ -5,10 +5,11 @@ Make fasta files with point mutations
 """
 import os
 
-def make_reversion_fastas(seq_state_1, seq_state_2, output_dir):
+def make_reversion_fastas(seq_state_1, seq_state_2, output_dir, offset=4):
     
     '''
     Outputs fasta files containing all point mutants from state_2 aa to state_1 aa
+    Naming includes optional offset if PDB numbering does not start from 1
     '''
     os.makedirs(output_dir, exist_ok=True)
     for idx, aa_state_2 in enumerate(list(seq_state_2)):
@@ -18,16 +19,17 @@ def make_reversion_fastas(seq_state_1, seq_state_2, output_dir):
         
         if aa_state_2 != aa_state_1:
             original_state_2[idx] = aa_state_1
-            fname = '%s%d%s'%(aa_state_2, (idx+1), aa_state_1)
+            fname = '%s%d%s'%(aa_state_2, (idx+1+offset), aa_state_1)
             f = open(os.path.join(output_dir, '%s.fasta'%fname),'w')
             f.write('> %s\n'%fname)
             f.write(''.join(original_state_2))
             f.close()
 
     
-def make_DMS_fastas(seq, idx_list, output_dir):
+def make_DMS_fastas(seq, idx_list, output_dir, offset=4):
     '''
     Make fastas for all amino acids at a list of positions given by idx_list (0-indexed)
+    Naming includes optional offset if PDB numbering does not start from 1
     '''
     os.makedirs(output_dir, exist_ok=True)
     aas = ['A','D','E','F','I','K','L','M','N','Q','R','S','T','V','W','Y']
@@ -38,7 +40,7 @@ def make_DMS_fastas(seq, idx_list, output_dir):
             tmp[idx] = aa
         
             f = open(os.path.join(output_dir, '%s%d%s.fasta'%(seq[idx],(idx+1),aa)),'w')
-            f.write('> %s%d%s\n'%(seq[idx],(idx+1),aa))
+            f.write('> %s%d%s\n'%(seq[idx],(idx+1+offset),aa))
             f.write(''.join(tmp))
             f.close()
         
